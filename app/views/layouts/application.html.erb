@@ -8,15 +8,25 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= turbo_include_tags %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
   <body class="bg-black text-white">
-    <main class="container mx-auto py-6 px-2 mb-32">
-      <header>
-        <h1 class="flex items-center text-lg mb-4 cursor-pointer font-semibold">
-          <%= image_tag "valorant-logo-white.png", alt: "logo", class: "w-6 h-6 mr-2" %>
+    <main class="container mx-auto my-9">
+      <header class="flex items-center h-9 mb-8">
+        <h1 class="flex items-center text-xl font-semibold cursor-pointer">
+          <%= image_tag "valorant-logo-white.png", alt: "logo", class: "w-5 h-5 mr-2" %>
           Valorant Esports
         </h1>
+        <ul class="flex-1 flex gap-8 justify-end items-center">
+          <li class="text-lg">
+            <a href="/vct">VCT</a>
+          </li>
+          <li class="text-lg">
+            <a href="/challengers">Challengers</a>
+          </li>
+        </ul>
       </header>
 
       <%= yield %>
