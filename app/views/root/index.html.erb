@@ -1,6 +1,6 @@
 <h1 class="text-lg mb-6">현재 <b class="text-masters">VCT 2024: 마스터스 마드리드</b> 가 진행중입니다.</h1>
 
-<div class="flex gap-4">
+<div class="flex gap-8">
   <div class="flex-1">
     <h2 class="text-2xl font-extrabold mb-4">경기 일정</h2>
     <ul class="flex flex-col gap-4">
@@ -8,7 +8,21 @@
       <%= render "match_group" %>
     </ul>
   </div>
-  <div class="flex-[2] flex flex-col">
-    <h2 class="text-2xl font-extrabold">대진표</h2>
+  <div class="flex-[2]">
+    <h2 class="text-2xl font-extrabold mb-6">대진표</h2>
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-col gap-8">
+        <div class="w-full flex justify-center">
+          <%= render "match_bracket", name: "0W 0L", recursive: false %>
+        </div>
+        <div class="w-full flex justify-center gap-8">
+          <%= render "match_bracket", name: "1W 0L", recursive: false %>
+          <%= render "match_bracket", name: "0W 1L", recursive: false %>
+        </div>
+        <div class="w-full flex justify-center">
+          <%= render "match_bracket", name: "1W 1L", recursive: false %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,2 @@
+class CompetitionStage < ApplicationRecord
+end
