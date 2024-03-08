@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_07_022001) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_08_093930) do
   create_table "competition_stages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "competition_id"
+    t.index ["competition_id"], name: "index_competition_stages_on_competition_id"
   end
 
   create_table "competitions", force: :cascade do |t|
