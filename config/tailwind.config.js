@@ -13,6 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        valorant: '#ff4654',
         masters: '#7048CD',
         champions: '#C5B174',
         america: '#FF570C',

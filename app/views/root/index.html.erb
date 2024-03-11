@@ -1,26 +1,26 @@
-<h1 class="text-lg mb-6">현재 <b class="text-masters">VCT 2024: 마스터스 마드리드</b> 가 진행중입니다.</h1>
+<h1 class="text-lg mb-6">현재 <b class="font-extrabold">VCT 2024: 마스터스 마드리드</b>가 진행중입니다.</h1>
 
 <div class="flex gap-8">
   <div class="flex-1">
-    <h2 class="text-2xl font-extrabold mb-4">경기 일정</h2>
+    <h2 class="text-3xl font-extrabold mb-4">경기 일정</h2>
     <ul class="flex flex-col gap-4">
       <%= render "match_group" %>
       <%= render "match_group" %>
     </ul>
   </div>
   <div class="flex-[2]">
-    <h2 class="text-2xl font-extrabold mb-6">대진표</h2>
-    <div class="flex flex-col gap-10">
-      <div class="flex flex-col gap-8">
-        <div class="w-full flex justify-center">
-          <%= render "match_bracket", name: "0W 0L", recursive: false %>
+    <h2 class="text-3xl font-extrabold mb-4">최근 소식</h2>
+    <div class="flex flex-col gap-2" href="#">
+      <div class="flex items-center h-32 py-2">
+        <div class="bg-[url('/assets/news/news_1.webp')] w-48 h-full bg-cover">
+          <div class="bg-gradient-to-r from-transparent to-neutral-950 to-90% h-full"></div>
         </div>
-        <div class="w-full flex justify-center gap-8">
-          <%= render "match_bracket", name: "1W 0L", recursive: false %>
-          <%= render "match_bracket", name: "0W 1L", recursive: false %>
-        </div>
-        <div class="w-full flex justify-center">
-          <%= render "match_bracket", name: "1W 1L", recursive: false %>
+        <div class="flex-1 -m-12">
+          <p class="font-bold text-sm text-valorant">
+            팀 ・ 계약정보
+          </p>
+          <p class="font-bold text-xl">Cloud9이 wippie와의 계약종료 발표</p>
+          <p class="text-sm text-neutral-500">2024. 3. 7.</p>
         </div>
       </div>
     </div>
