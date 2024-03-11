@@ -8,21 +8,14 @@
       <%= render "match_group" %>
     </ul>
   </div>
+
   <div class="flex-[2]">
     <h2 class="text-3xl font-extrabold mb-4">최근 소식</h2>
-    <div class="flex flex-col gap-2" href="#">
-      <div class="flex items-center h-32 py-2">
-        <div class="bg-[url('/assets/news/news_1.webp')] w-48 h-full bg-cover">
-          <div class="bg-gradient-to-r from-transparent to-neutral-950 to-90% h-full"></div>
-        </div>
-        <div class="flex-1 -m-12">
-          <p class="font-bold text-sm text-valorant">
-            팀 ・ 계약정보
-          </p>
-          <p class="font-bold text-xl">Cloud9이 wippie와의 계약종료 발표</p>
-          <p class="text-sm text-neutral-500">2024. 3. 7.</p>
-        </div>
-      </div>
+    <ul class="flex flex-col gap-2">
+      <%= render partial: 'article', collection: @articles %>
+    </ul>
+    <div class="w-full flex justify-end">
+      <%= link_to '더보기 >', '#' %>
     </div>
   </div>
 </div>
