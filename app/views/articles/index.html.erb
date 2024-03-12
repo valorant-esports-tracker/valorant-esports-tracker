@@ -1,0 +1,10 @@
+<div class="flex flex-col">
+  <div class="flex-1">
+    <h2 class="text-3xl font-extrabold mb-4">최근 소식</h2>
+    <ul class="flex flex-col gap-2">
+      <%= render partial: 'article', collection: @articles %>
+    </ul>
+  </div>
+
+  <%== pagy_nav @pagy %>
+</div>

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root "root#index"
+
+  resources :articles, only: %i[index show]
 end

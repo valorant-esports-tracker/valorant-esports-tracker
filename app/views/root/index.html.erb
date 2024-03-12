@@ -12,10 +12,10 @@
   <div class="flex-[2]">
     <h2 class="text-3xl font-extrabold mb-4">최근 소식</h2>
     <ul class="flex flex-col gap-2">
-      <%= render partial: 'article', collection: @articles %>
+      <%= render partial: 'articles/article', collection: @articles %>
     </ul>
     <div class="w-full flex justify-end">
-      <%= link_to '더보기 >', '#' %>
+      <%= link_to '더보기 >', articles_path %>
     </div>
   </div>
 </div>
