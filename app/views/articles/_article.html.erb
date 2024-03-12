@@ -1,5 +1,5 @@
 <%# locals: (article:) %>
-<li class="flex items-center h-32 py-2">
+<li class="flex items-center h-32 py-2" style="view-transition-name: <%= dom_id(article) %>">
   <div class="w-48 h-full bg-cover" style="background-image: url('<%= article.image %>')">
     <div class="bg-gradient-to-r from-transparent to-neutral-950 to-90% h-full"></div>
   </div>
