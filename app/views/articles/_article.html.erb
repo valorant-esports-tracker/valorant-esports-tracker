@@ -1,5 +1,5 @@
 <%# locals: (article:) %>
-<li class="flex items-center h-32 py-2" style="view-transition-name: <%= dom_id(article) %>">
+<%= link_to article_path(article), class: 'flex items-center h-32 py-2', style: "view-transition-name: #{dom_id(article)}" do %>
   <div class="w-48 h-full bg-cover" style="background-image: url('<%= article.image %>')">
     <div class="bg-gradient-to-r from-transparent to-neutral-950 to-90% h-full"></div>
   </div>
@@ -11,4 +11,4 @@
     <p class="font-bold text-xl"><%= article.title %></p>
     <p class="text-sm text-neutral-500"><%= article.published_at.strftime('%Y. %m. %d.') %></p>
   </div>
-</li>
+<% end %>

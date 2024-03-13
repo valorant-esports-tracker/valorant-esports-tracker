@@ -1,0 +1,13 @@
+<div class="flex flex-col">
+  <div class="flex-1">
+    <h2 class="text-3xl font-extrabold mb-4"><%= @article.title %></h2>
+  </div>
+
+  <div>
+    <%= image_tag @article.image %>
+  </div>
+
+  <div>
+    <%= markdown(@article.content) %>
+  </div>
+</div>
